@@ -1,0 +1,25 @@
+<interbull type="animinfo" version="1.0">
+  <animals>
+    <a id="LIMIRLM12314567890">
+      <GENO_BEEF pop="IRL" genotyped="Y"  share="Y" tissue="E"  />
+    </a>
+    <a id="LIMIRLM1234567891">
+      <GENO_BEEF pop="IRL" genotyped="Y" share="N" tissue="N" />
+    </a>
+    <a id="LIMIRLM1234567892">
+      <GENO_BEEF pop="IRL" genotyped="Y" share="N" tissue="H" />
+    </a>
+    <a id="LIMIRLM1234567893">
+      <GENO_BEEF pop="IRL" genotyped="Y" share="Y" tissue="M" />
+    </a>
+    <a id="LIMIRLM1234567894">
+      <GENO_BEEF pop="IRL" genotyped="Y" share="Y" tissue="U" />
+    </a>
+    <a id="LIMIRLM1234567895">
+      <GENO_BEEF pop="IRL" genotyped="Y" share="Y" tissue="S" />
+    </a>
+    <a id="LIMIRLM1234567896">
+      <GENO_BEEF pop="IRL" genotyped="Y" share="Y" tissue="B" />
+    </a>
+  </animals>
+</interbull>
