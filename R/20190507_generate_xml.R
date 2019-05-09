@@ -6,12 +6,12 @@
 
 #' Read the example csv-file in inst/extdata
 s_csv_file <- file.path("inst/extdata/genotyped_animal.csv")
-df <- read.csv(file=s_csv_file, header = TRUE, sep = ";")
-df$id <- as.character(as.factor(df$id))
-df$pop <- as.character(as.factor(df$pop))
-df$genotyped <- as.character(as.factor(df$genotyped))
-df$share <- as.character(as.factor(df$share))
-df$tissue <- as.character(as.factor(df$tissue))
+df <- read.csv(file=s_csv_file, header = TRUE, sep = ";", stringsAsFactors=FALSE)
+# df$id <- as.character(as.factor(df$id))
+# df$pop <- as.character(as.factor(df$pop))
+# df$genotyped <- as.character(as.factor(df$genotyped))
+# df$share <- as.character(as.factor(df$share))
+# df$tissue <- as.character(as.factor(df$tissue))
 
 #' Create of XML 
 library(XML)
@@ -69,3 +69,24 @@ for (i in 1:nrow(df)) {
 xml$closeNode()
 saveXML(xml$doc(), "test.xml")
 xmlParse("test.xml")
+
+
+#' ---- ----
+#' 
+
+xmlt_anim <- xmlTree("animals")
+# for (i in 1:nrow(df)) {
+  i <- 1
+  xmlt_anim$addNode("a", attrs = c(id = df[i,"id"]), close = FALSE)
+  #  appNames <- names(df)[names(df) != "id"]
+  #  for (j in appNames) {
+  #    xml$addNode(j, df[i, j])
+  #  }
+  xmlt_anim$closeNode()
+# }
+
+  xmlt_anim$doc()  
+  xmlt_anim$closeNode()  
+  saveXML(xmlt_anim$doc(), "xmlt_anim.xml")
+  xmlParse("xmlt_anim.xml")
+  
