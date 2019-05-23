@@ -1,0 +1,82 @@
+<interbull type="animinfo" version="1.0">
+  <animals>
+    <a id="LIMCHEM120099020658">
+      <GENO_BEEF pop="CHE" genotyped="Y" share="Y" tissue="U"/>
+    </a>
+    <a id="LIMCHEM120091250640">
+      <GENO_BEEF pop="CHE" genotyped="Y" share="Y" tissue="U"/>
+    </a>
+    <a id="LIMCHEM120093140147">
+      <GENO_BEEF pop="CHE" genotyped="Y" share="Y" tissue="U"/>
+    </a>
+    <a id="LIMCHEM120093222812">
+      <GENO_BEEF pop="CHE" genotyped="Y" share="Y" tissue="U"/>
+    </a>
+    <a id="LIMCHEM120088952885">
+      <GENO_BEEF pop="CHE" genotyped="Y" share="Y" tissue="U"/>
+    </a>
+    <a id="LIMCHEM120094867043">
+      <GENO_BEEF pop="CHE" genotyped="Y" share="Y" tissue="U"/>
+    </a>
+    <a id="LIMCHEM120096822149">
+      <GENO_BEEF pop="CHE" genotyped="Y" share="Y" tissue="U"/>
+    </a>
+    <a id="LIMCHEM120079200216">
+      <GENO_BEEF pop="CHE" genotyped="Y" share="Y" tissue="U"/>
+    </a>
+    <a id="LIMCHEM120102287153">
+      <GENO_BEEF pop="CHE" genotyped="Y" share="Y" tissue="U"/>
+    </a>
+    <a id="LIMCHEM120077083095">
+      <GENO_BEEF pop="CHE" genotyped="Y" share="Y" tissue="U"/>
+    </a>
+    <a id="LIMCHEM120101526864">
+      <GENO_BEEF pop="CHE" genotyped="Y" share="Y" tissue="U"/>
+    </a>
+    <a id="LIMCHEM120101216222">
+      <GENO_BEEF pop="CHE" genotyped="Y" share="Y" tissue="U"/>
+    </a>
+    <a id="LIMCHEM120088981632">
+      <GENO_BEEF pop="CHE" genotyped="Y" share="Y" tissue="U"/>
+    </a>
+    <a id="LIMCHEM120094866664">
+      <GENO_BEEF pop="CHE" genotyped="Y" share="Y" tissue="U"/>
+    </a>
+    <a id="LIMCHEM120077498660">
+      <GENO_BEEF pop="CHE" genotyped="Y" share="Y" tissue="U"/>
+    </a>
+    <a id="AANCHEM120099620506">
+      <GENO_BEEF pop="CHE" genotyped="Y" share="Y" tissue="U"/>
+    </a>
+    <a id="LIMCHEM120096822088">
+      <GENO_BEEF pop="CHE" genotyped="Y" share="Y" tissue="U"/>
+    </a>
+    <a id="SIMCHEF120061053936">
+      <GENO_BEEF pop="CHE" genotyped="Y" share="Y" tissue="U"/>
+    </a>
+    <a id="SIMCHEF120111998262">
+      <GENO_BEEF pop="CHE" genotyped="Y" share="Y" tissue="U"/>
+    </a>
+    <a id="SIMCHEF120058421656">
+      <GENO_BEEF pop="CHE" genotyped="Y" share="Y" tissue="U"/>
+    </a>
+    <a id="SIMDEUM000940777732">
+      <GENO_BEEF pop="CHE" genotyped="Y" share="Y" tissue="U"/>
+    </a>
+    <a id="SIMCHEM120073318306">
+      <GENO_BEEF pop="CHE" genotyped="Y" share="Y" tissue="U"/>
+    </a>
+    <a id="SIMCHEF120112055537">
+      <GENO_BEEF pop="CHE" genotyped="Y" share="Y" tissue="U"/>
+    </a>
+    <a id="SIMCHEF120111998439">
+      <GENO_BEEF pop="CHE" genotyped="Y" share="Y" tissue="U"/>
+    </a>
+    <a id="SIMCHEM120111094339">
+      <GENO_BEEF pop="CHE" genotyped="Y" share="Y" tissue="U"/>
+    </a>
+    <a id="SIMCHEF120111998569">
+      <GENO_BEEF pop="CHE" genotyped="Y" share="Y" tissue="U"/>
+    </a>
+  </animals>
+</interbull>
