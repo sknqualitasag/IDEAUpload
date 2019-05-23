@@ -1,16 +1,14 @@
 #' Command to execute via Console
 args<-commandArgs(trailingOnly = TRUE)
-if(length(args)!=3) stop("didn't receive 3 arguments")
+print(args)
+if(length(args)!=4) stop("didn't receive 4 arguments")
 s_imputing_old_csv_file <-args[1]
-s_imputing_vms_csv_file <-args[1]
-s_imputing_si70_csv_file <-args[2]
-s_imputing_xml_file <-args[3]
+s_imputing_vms_csv_file <-args[2]
+s_imputing_si70_csv_file <-args[3]
+s_imputing_xml_file <-args[4]
 if(!file.exists(s_imputing_old_csv_file)) stop("1st argument isn't an existing file")
 if(!file.exists(s_imputing_vms_csv_file)) stop("2nd argument isn't an existing file")
 if(!file.exists(s_imputing_si70_csv_file)) stop("3rd argument isn't an existing file")
-
-#Delete global environment
-#rm(list=ls())
 
 #' Load requiered packages
 suppressPackageStartupMessages(if(! require("readr")) {
@@ -94,7 +92,7 @@ cat("---old genotypes infos, where share set to N due to change in the parentage
 print(table(tbl_ChangeShareParentage_vms$ImputationsRasse))
 
 tbl_ChangeShareParentage_vms$share <- "N"
-rm(tbl_first_file);rm(tbl_imputing_old);rm(tbl_imputing_vms2);rm(tbl_second_file);rm(tbl_stillOKParentage_vms);rm(tbl_to_update_file);rm(tbl_upadte_vms)
+rm(tbl_first_file);rm(tbl_imputing_old);rm(tbl_imputing);rm(tbl_second_file);rm(tbl_stillOKParentage_vms);rm(tbl_to_update_file);rm(tbl_upadte_vms)
 
 #' Pool data together to upload of new genotypes or incorrect parentage
 tbl_IDEA <- rbind(tbl_correctParentage_vms,tbl_ChangeShareParentage_vms)
