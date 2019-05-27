@@ -1,14 +1,16 @@
 #' Command to execute via Console
 args<-commandArgs(trailingOnly = TRUE)
 print(args)
-if(length(args)!=4) stop("didn't receive 4 arguments")
+#if(length(args)!=4) stop("didn't receive 4 arguments")
+if(length(args)!=3) stop("didn't receive 3 arguments")
 s_imputing_old_csv_file <-args[1]
 s_imputing_vms_csv_file <-args[2]
-s_imputing_si70_csv_file <-args[3]
-s_imputing_xml_file <-args[4]
+#s_imputing_si70_csv_file <-args[3]
+#s_imputing_xml_file <-args[4]
+s_imputing_xml_file <-args[3]
 if(!file.exists(s_imputing_old_csv_file)) stop("1st argument isn't an existing file")
 if(!file.exists(s_imputing_vms_csv_file)) stop("2nd argument isn't an existing file")
-if(!file.exists(s_imputing_si70_csv_file)) stop("3rd argument isn't an existing file")
+#if(!file.exists(s_imputing_si70_csv_file)) stop("3rd argument isn't an existing file")
 
 #' Load requiered packages
 suppressPackageStartupMessages(if(! require("readr")) {
@@ -29,15 +31,18 @@ suppressPackageStartupMessages(if(! require("XML")) {
 #' Read the "old" csv-file in data
 #s_imputing_old_csv_file <- file.path("inst/extdata/test.csv")
 tbl_imputing_old <- readr::read_delim(file=s_imputing_old_csv_file, delim = ";", guess_max = 5000)
+colnames(tbl_imputing_old)[1] <- "ITBID"
+
 
 #' Read the "new" csv-files in data
 #s_imputing_vms_csv_file <- file.path("inst/extdata/test1.csv")
 tbl_imputing_vms <- readr::read_delim(file=s_imputing_vms_csv_file, delim = ";", guess_max = 5000)
 #s_imputing_si70_csv_file <- file.path("inst/extdata/testsi.csv")
-tbl_imputing_si70 <- readr::read_delim(file=s_imputing_si70_csv_file, delim = ";", guess_max = 5000)
+#tbl_imputing_si70 <- readr::read_delim(file=s_imputing_si70_csv_file, delim = ";", guess_max = 5000)
 
 #' Both new files in one
-tbl_imputing <- rbind(tbl_imputing_vms, tbl_imputing_si70)
+#tbl_imputing <- rbind(tbl_imputing_vms, tbl_imputing_si70)
+tbl_imputing <- tbl_imputing_vms
 
 
 #' Differenciate first and second file

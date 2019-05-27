@@ -5,12 +5,15 @@
 
 #' Command to execute via Console
 args<-commandArgs(trailingOnly = TRUE)
-if(length(args)!=3) stop("didn't receive 3 arguments")
+#if(length(args)!=3) stop("didn't receive 3 arguments")
+if(length(args)!=2) stop("didn't receive 2 arguments")
 s_imputing_vms_csv_file <-args[1]
-s_imputing_si70_csv_file <-args[2]
-s_imputing_xml_file <-args[3]
+#s_imputing_si70_csv_file <-args[2]
+#s_imputing_xml_file <-args[3]
+s_imputing_xml_file <-args[2]
+
 if(!file.exists(s_imputing_vms_csv_file)) stop("1st argument isn't an existing file")
-if(!file.exists(s_imputing_si70_csv_file)) stop("2nd argument isn't an existing file")
+#if(!file.exists(s_imputing_si70_csv_file)) stop("2nd argument isn't an existing file")
 
 #' Load requiered packages
  suppressPackageStartupMessages(if(! require("readr")) {
@@ -36,11 +39,11 @@ suppressPackageStartupMessages(if(! require("XML")) {
 #s_imputing_vms_csv_file <- file.path("inst/extdata/test.csv")
 #s_imputing_si70_csv_file <- file.path("inst/extdata/testsi.csv")
 tbl_imputing_vms <- read_delim(file=s_imputing_vms_csv_file, delim = ";", guess_max = 5000)
-tbl_imputing_si70 <- readr::read_delim(file=s_imputing_si70_csv_file, delim = ";", guess_max = 5000)
+#tbl_imputing_si70 <- readr::read_delim(file=s_imputing_si70_csv_file, delim = ";", guess_max = 5000)
 
 #' Both files in one
-tbl_imputing <- rbind(tbl_imputing_vms, tbl_imputing_si70)
-
+#tbl_imputing <- rbind(tbl_imputing_vms, tbl_imputing_si70)
+tbl_imputing <- tbl_imputing_vms
 
 #' Choose only the columns and the breeds of interest
 tbl_df_vms <- tbl_imputing %>% select(c(3,4,8:15,20:22))
@@ -76,7 +79,8 @@ table(tbl_correctParentage_vms$ImputationsRasse)
 #Write CSV of genotypes with correct Parentage which would be upload
 readr::write_delim(tbl_correctParentage_vms, delim =";",path = paste(Sys.Date(),sep = "_","GenotypForUploadingOnIDEA.csv"))
 
-rm(tbl_df_vms);rm(tbl_imputing);rm(tbl_imputing_si70);rm(tbl_imputing_vms);rm(s_imputing_si70_csv_file);rm(s_imputing_vms_csv_file)
+rm(tbl_df_vms);rm(tbl_imputing);rm(tbl_imputing_vms);rm(s_imputing_vms_csv_file)
+#rm(tbl_imputing_si70);rm(s_imputing_si70_csv_file)
 df <- tbl_correctParentage_vms %>% select(c(1,14:17))
 
 #' Create of XML 
